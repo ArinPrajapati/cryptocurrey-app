@@ -34,6 +34,7 @@ a:hover{
 }
 .routes{
     padding: 20px;
+    padding-left:2rem ;
 }
 .nav-container{
     position: fixed;
@@ -88,7 +89,7 @@ a:hover{
 
 @media screen and (max-width:1000px){
     .main{
-        /* margin-left: 100px; */
+        margin-left: 1000px;
     }
 }
 
@@ -114,8 +115,12 @@ a:hover{
         position:fixed;
         width: 100%;
         z-index: 100;
+        /* margin-bottom: 4rem; */
         background-color: var(--bgSecondary);
+      
     }
+ 
+
   
     .menu-control-container{
         display: block !important;
@@ -130,6 +135,17 @@ a:hover{
     }
     .show-more{
         font-size: 1.3rem !important;
+    }
+    .menu-item{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+       
+    }
+
+    
+    .routes{
+        margin-top: 5rem;
     }
 }
 
