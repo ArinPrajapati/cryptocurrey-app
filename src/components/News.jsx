@@ -1,19 +1,20 @@
-import React from 'react'
-import { Select , Typography , Row , Col , Avatar , Card } from 'antd'
-import moment from 'moment/moment'
-import { useGetCryptoNewsQuery } from '../services/cryptoNews'
 
-const {data , isFetching } = useGetCryptoNewsQuery();
-const Allnews = data?.data?.news;
-console.log(Allnews);
+import React from "react";
+import { Select, Typography, Row, Col, Avatar, Card } from "antd";
+import moment from "moment/moment";
 
-if (isFetching) return "Loading...";
+import { useGetCryptosNewsQuery } from "../services/cryptoNews";
 
-const News = () => {
-  
-  return (
-    <div>News</div>
-  )
-}
+const { Text, Title } = Typography;
+const { Option } = Select;
 
-export default News
+const News = (simplified) => {
+  const {  data : cryptoNews, error, isLoading } = useGetCryptosNewsQuery(
+    simplified ? 10 : 100,
+);
+ console.log(cryptoNews)
+  return <div>News</div>;
+};
+
+export default News;
+

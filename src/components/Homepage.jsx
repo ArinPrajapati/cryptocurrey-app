@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 import { Cryptocurrencies, News } from "../components";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
+// import { useGetCryptoNewsQuery } from '../services/cryptoNews'
 
 const count = 10;
 const { Title } = Typography;
+// console.log(useGetCryptoNewsQuery?.data?.data)
 const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
