@@ -23,8 +23,6 @@ const Cryptocurrencies = ({ simplified }) => {
 
   console.log(cryptos);
 
- 
-
   return (
     <>
       {!simplified && (
@@ -36,7 +34,7 @@ const Cryptocurrencies = ({ simplified }) => {
           />
         </div>
       )}
-      {(isFeching) ? ("loading..."): ""}
+      {!isFeching ? "" : "loading...."}
 
       <Row gutter={[20, 41]} className="crypto-card-container">
         {cryptos?.map((currency) => (
